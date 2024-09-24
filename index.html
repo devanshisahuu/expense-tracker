@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-container">
+        <div class="container tracker-container">
+            <h1>Expense Tracker</h1>
+            
+            <!-- Income Section -->
+            <section id="income-section">
+                <h2>Add Income</h2>
+                <input type="number" id="income-input" placeholder="Enter income amount">
+                <div>
+                    <p><strong>Total Income:</strong> <span id="total-income">0</span></p>
+                    <p><strong>In-hand Amount:</strong> <span id="in-hand-amount">0</span></p>
+                </div>
+            </section>
+
+            <!-- Expense Form Section -->
+            <section id="expense-form-section">
+                <h2>Add Expense</h2>
+                <form id="expense-form">
+                    <input type="number" id="expense-amount" placeholder="Amount to spend" required>
+                    <select id="expense-category" required>
+                        <option value="">Select Category</option>
+                        <option value="Food">Food</option>
+                        <option value="Medicines">Medicines</option>
+                        <option value="Repair">Repair</option>
+                        <option value="Self Care">Self Care</option>
+                        <option value="Groceries">Groceries</option>
+                        <option value="Entertainment">Entertainment</option>
+                        <option value="Bills">Bills</option>
+                    </select>
+                    <input type="text" id="expense-description" placeholder="Description">
+                    <button type="submit">Add Expense</button>
+                </form>
+                <p><strong>Total Spent:</strong> <span id="total-spent">0</span></p>
+            </section>
+        </div>
+
+        <!-- Expense Summary Section -->
+        <div class="container summary-container">
+            <h1>Expense Summary</h1>
+            <div class="summary-cards">
+                <div class="summary-card">
+                    <h2>Today:</h2>
+                    <ul id="today-summary"></ul>
+                </div>
+                <div class="summary-card">
+                    <h2>Week:</h2>
+                    <ul id="week-summary"></ul>
+                </div>
+                <div class="summary-card">
+                    <h2>Month:</h2>
+                    <ul id="month-summary"></ul>
+                </div>
+                <!-- Context Menu -->
+                <div id="context-menu" class="context-menu">
+                    <ul>
+                        <li id="edit-item">Edit</li>
+                        <li id="delete-item">Delete</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
